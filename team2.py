@@ -18,6 +18,24 @@ def move(my_history, their_history, my_score, their_score):
     Returns 'c' or 'b'. 
     '''
 
+    if (my_history=='' and their_history=='' and my_score==0 and their_score==0):
+        return 'b'
+    if (my_history=="c" and their_history=="b"):
+        return 'c'
+    if (my_history=="b" and their_history=="c"):
+        return 'b'
+    if (my_history=="b" and their_history=="b"):
+        return 'b'   
+    if (my_history=="cc" and their_history=="bb"):
+        return 'b'
+    if (my_history=="bb" and their_history=="bb"):
+        return 'b'
+    if (my_history=="bb" and their_history=="cb"):
+        return 'b'
+    if (my_history=="bb" and their_history=="bc"):
+        return 'c'
+    if (my_history=="cb" and their_history=="bc"):
+        return 'c'
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
     # The first round between these two players is my_history[0] and their_history[0].
